@@ -14,10 +14,10 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v2.311.0
 
     - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v2.311.0
+      uses: microsoft/setup-msbuild@v1.0.2
 
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v2
