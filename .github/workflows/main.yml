@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -38,4 +38,3 @@ jobs:
         name: Release
         path: bin/Release
 
-    # Add any deployment steps you need, such as deploying to a server or packaging the application.
