@@ -55,7 +55,7 @@ namespace WinForms_SQLite_SDB_project
                 string firstName = reader["firstname"].ToString();
                 string lastName = reader["lastname"].ToString();
                 string medicalCondition = reader["medicalcondition"].ToString();
-                
+
 
                 resultText.AppendLine($"Name: {firstName} {lastName}, with medical condition: {medicalCondition}");
                 // display al deze gelezen data in een bepaalde vorm 

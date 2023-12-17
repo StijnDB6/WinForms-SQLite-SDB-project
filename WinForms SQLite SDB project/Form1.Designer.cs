@@ -114,7 +114,7 @@
             greetingLabel.AutoSize = true;
             greetingLabel.BackColor = Color.White;
             greetingLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            greetingLabel.Location = new Point(684, 257);
+            greetingLabel.Location = new Point(612, 251);
             greetingLabel.Name = "greetingLabel";
             greetingLabel.Size = new Size(0, 28);
             greetingLabel.TabIndex = 8;
@@ -123,7 +123,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1202, 450);
+            ClientSize = new Size(1223, 549);
             Controls.Add(greetingLabel);
             Controls.Add(addPatient);
             Controls.Add(clearDatabase);

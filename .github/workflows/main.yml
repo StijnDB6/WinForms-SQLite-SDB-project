@@ -1,18 +1,18 @@
-name: CI/CD Pipeline
+name: CI/CD Pipeline # CI/CD pipeline bouwen
 
 on:
   push:
     branches:
-      - master
+      - master # zit op master branch in visual studio
 
 jobs:
   build:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [windows-2022]
+        os: [windows-2022] # bouw voor windows 2022
 
-    steps:
+    steps: # alle jobs om werkend programma te krijgen
     - name: Checkout repository
       uses: actions/checkout@v2
 
@@ -24,18 +24,18 @@ jobs:
 
 
     - name: Restore NuGet packages
-      run: nuget restore "WinForms SQLite SDB project.sln"
+      run: nuget restore "WinForms SQLite SDB project.sln" # eigen solution naam
 
     - name: Build
       run: msbuild /p:Configuration=Release "WinForms SQLite SDB project.sln"
 
-  deploy:
+  deploy: # deployen van app
     needs: build
     runs-on: windows-latest
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v2
         with:
-          name: Release
+          name: Release # deploy naam is 'Release' die in directory bin/Release wordt gestoken
           path: bin/Release
 
